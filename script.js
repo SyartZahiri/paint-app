@@ -23,12 +23,6 @@ document.getElementById('clear').addEventListener('click', () => {
   localStorage.removeItem('drawing');
 });
 
-
-document.getElementById('save').addEventListener('click', () => {
-  const dataURL = canvas.toDataURL();
-  localStorage.setItem('drawing', dataURL);
-});
-
 document.getElementById('download').addEventListener('click', () => {
   const dataURL = canvas.toDataURL('image/png');
   const link = document.createElement('a');
@@ -66,6 +60,7 @@ canvas.addEventListener('mousemove', (e) => {
   if (tool === 'draw') {
     ctx.lineTo(x, y);
     ctx.stroke();
+    saveDrawing();
   }
 });
 
@@ -121,6 +116,7 @@ function saveDrawing() {
   localStorage.setItem('drawing', dataURL);
 }
 
+// Laden des gespeicherten Bildes beim Start
 const savedDrawing = localStorage.getItem('drawing');
 if (savedDrawing) {
   const img = new Image();
