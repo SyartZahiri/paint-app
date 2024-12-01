@@ -24,6 +24,11 @@ document.getElementById('clear').addEventListener('click', () => {
 });
 
 
+document.getElementById('save').addEventListener('click', () => {
+  const dataURL = canvas.toDataURL();
+  localStorage.setItem('drawing', dataURL);
+});
+
 document.getElementById('download').addEventListener('click', () => {
   const dataURL = canvas.toDataURL('image/png');
   const link = document.createElement('a');
