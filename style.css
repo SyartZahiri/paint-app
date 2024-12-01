@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #e6e6e6;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .toolbar label, .toolbar input, .toolbar select, .toolbar button {
+    margin: 5px;
+  }
+
+  .toolbar button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .toolbar button:hover {
+    background-color: #45a049;
+  }
+
+  .toolbar select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  #canvas {
+    flex-grow: 1;
+    border: 2px solid #ccc;
+    background-color: white;
+    cursor: crosshair;
+    display: block;
+    margin: auto;
+  }
+
+  .color-picker, .tool-selector, .slider-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-container input {
+    margin: 0 5px;
+  }

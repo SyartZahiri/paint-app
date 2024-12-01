@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toolbar">
+    <div class="color-picker">
+      <label for="color">Farbe:</label>
+      <input type="color" id="color" value="#000000">
+    </div>
+
+    <div class="slider-container">
+      <label for="thickness">Dicke:</label>
+      <input type="range" id="thickness" min="1" max="50" value="5">
+    </div>
+
+    <div class="tool-selector">
+      <label for="tool">Werkzeug:</label>
+      <select id="tool">
+        <option value="draw">Zeichnen</option>
+        <option value="text">Text</option>
+        <option value="erase">Radierer</option>
+        <option value="line">Linie</option>
+        <option value="rectangle">Rechteck</option>
+        <option value="circle">Kreis</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button id="clear">Leeren</button>
+      <button id="save">Speichern</button>
+      <button id="download">Herunterladen</button>
+    </div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
